@@ -32,7 +32,7 @@ class Ball:
         self.size = random.choice([21, 41])
         if self.size == 21:
             self.image = load_image('ball21x21.png')
-            self.ground=58
+            self.ground = 58
         else:
             self.image = load_image('ball41x41.png')
             self.ground = 71
@@ -43,6 +43,7 @@ class Ball:
             self.y -= self.speed
         if self.y <= self.ground:
             self.y = self.ground
+
     def draw(self):
         self.image.clip_draw(0, 0, self.size, self.size, self.x, self.y)
 
